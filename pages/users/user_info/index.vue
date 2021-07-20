@@ -62,7 +62,7 @@
 							<text class='iconfont icon-suozi'></text>
 						</view>
 					</view> -->
-                    <view class='item acea-row row-between-wrapper'>
+                    <view class='item acea-row row-between-wrapper' v-if="!timeShow">
                     	<view>收款码</view>
                         <navigator url="/pages/users/user_money_pay_list/payercode" class='input acea-row row-between-wrapper ri-my'>点击查看</navigator>
                     </view>
@@ -70,7 +70,7 @@
                     	<view>修改登录密码</view>
                         <navigator url="/pages/users/user_money_pay_list/editpwd" class='input acea-row row-between-wrapper ri-my'>点击修改</navigator>
                     </view>
-                    <view class='item acea-row row-between-wrapper'>
+                    <view class='item acea-row row-between-wrapper' v-if="!timeShow">
                     	<view>修改支付密码</view>
                         <navigator url="/pages/users/user_money_pay_list/editpaypwd" class='input acea-row row-between-wrapper ri-my'>点击修改</navigator>
                     </view>
@@ -135,6 +135,7 @@
 		},
 		data() {
 			return {
+				timeShow:uni.getStorageSync('upTime'),
 				userInfo: {},
 				loginType: 'h5', //app.globalData.loginType
 				userIndex: 0,

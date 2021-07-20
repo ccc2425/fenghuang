@@ -73,10 +73,10 @@
             },
             "icons" : {
                 "android" : {
-                    "hdpi" : "E:/project/新建文件夹/fenghuang/资料/72.png",
-                    "xhdpi" : "E:/project/新建文件夹/fenghuang/资料/96.png",
-                    "xxhdpi" : "E:/project/新建文件夹/fenghuang/资料/144.png",
-                    "xxxhdpi" : "E:/project/新建文件夹/fenghuang/资料/192.png"
+                    "hdpi" : "D:/project/fenghuang/资料/72.png",
+                    "xhdpi" : "D:/project/fenghuang/资料/96.png",
+                    "xxhdpi" : "D:/project/fenghuang/资料/144.png",
+                    "xxxhdpi" : "D:/project/fenghuang/资料/192.png"
                 }
             },
             "splashscreen" : {

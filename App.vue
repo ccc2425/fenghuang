@@ -29,6 +29,37 @@
 			// console.log(this.$store)
 			this.globalData.uid = this.$store.state.app.uid
 			let that = this;
+			//#ifdef APP-PLUS  
+			let now_ = new Date()
+			let fulture = new Date('2021/07/24')
+			let now_time = now_.getTime();
+			let fulture_time = fulture.getTime();
+			if(now_time>fulture_time){
+				uni.setStorageSync('upTime', true);
+			}
+			var server = "https://www.example.com/update"; //检查更新地址  
+			var req = { //升级检测数据  
+				"appid": plus.runtime.appid,  
+				"version": plus.runtime.version  
+			};  
+			uni.request({  
+				url: server,  
+				data: req,  
+				success: (res) => {  
+					if (res.statusCode == 200 && res.data.status === 1) {  
+						uni.showModal({ //提醒用户更新  
+							title: "更新提示",  
+							content: res.data.note,  
+							success: (res) => {  
+								if (res.confirm) {  
+									plus.runtime.openURL(res.data.url);  
+								}  
+							}  
+						})  
+					}  
+				}  
+			})  
+			//#endif
 			// #ifdef MP
 			if (HTTP_REQUEST_URL == '') {
 				console.error(
