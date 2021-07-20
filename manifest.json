@@ -1,0 +1,140 @@
+{
+    "name" : "丰煌商城",
+    "appid" : "__UNI__ADE4700",
+    "description" : "丰煌商城",
+    "versionName" : "1.0.1",
+    "versionCode" : "100",
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        "privacy" : {
+            "prompt" : "template",
+            "template" : {
+                //prompt取值为template时有效，用于配置模板提示框上显示的内容
+                "title" : "温馨提示",
+                "message" : "　　欢迎使用App，在你使用时，需要连接数据网络或者WIFI，产生的流量请咨询当地运营商。非常重视你的隐私保护和个人信息保护。在使用App服务前，请认真阅读<a  href='/pages/users/xy/fwxy'>《用户服务协议》</a>及<a href='/pages/users/xy/yszc'>《隐私政策》</a>，全部条款。你同意并接受全部条款后开始使用我们的服务<br/>",
+                "buttonAccept" : "同意并继续", //继续下一步，进入首页
+                "buttonRefuse" : "不同意" //退出下载
+            }
+        },
+        /* 模块配置 */
+        "modules" : {},
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ]
+            },
+            /* ios打包配置 */
+            "ios" : {},
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "ad" : {
+                    "ks" : {},
+                    "ks-content" : {},
+                    "gdt" : {},
+                    "csj" : {},
+                    "360" : {}
+                },
+                "push" : {
+                    "unipush" : {}
+                }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "E:/project/新建文件夹/fenghuang/资料/72.png",
+                    "xhdpi" : "E:/project/新建文件夹/fenghuang/资料/96.png",
+                    "xxhdpi" : "E:/project/新建文件夹/fenghuang/资料/144.png",
+                    "xxxhdpi" : "E:/project/新建文件夹/fenghuang/资料/192.png"
+                }
+            },
+            "splashscreen" : {
+                "androidStyle" : "common",
+                "android" : {
+                    "hdpi" : "C:/Users/Administrator/Desktop/fg760471784599.png",
+                    "xhdpi" : "C:/Users/Administrator/Desktop/fg760471784599.png",
+                    "xxhdpi" : "C:/Users/Administrator/Desktop/fg760471784599.png"
+                }
+            }
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "wx5fb1cc8edb3f8baa",
+        "setting" : {
+            "urlCheck" : false,
+            "minified" : true,
+            "postcss" : true,
+            "es6" : true
+        },
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "获取您的位置"
+            }
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true,
+        "uniStatistics" : {
+            "enable" : false
+        }
+    },
+    "h5" : {
+        "devServer" : {
+            "https" : false
+        },
+        "router" : {
+            "mode" : "history",
+            "base" : ""
+        },
+        "domain" : "http://fhshop.yukunbao.cn/",
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "NO7BZ-APDKP-UCBD7-VT7CX-R5UZK-JBF2W"
+                }
+            }
+        },
+        "title" : "丰煌商城"
+    }
+}
