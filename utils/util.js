@@ -279,9 +279,12 @@ import {
  				uni.showLoading({
  					title: '图片上传中',
  				});
+				let tempFilePaths = res.tempFilePaths[0]
+				let urls = HTTP_REQUEST_URL + '/api/' + uploadUrl+'/'+inputName
+				console.log(urls)
 				uni.uploadFile({
-					url: HTTP_REQUEST_URL + '/api/' + uploadUrl+'/'+inputName,
-					filePath: res.tempFilePaths[0],
+					url: urls,
+					filePath: tempFilePaths,
 					name: inputName,
 					formData: {
 						'filename': inputName
@@ -312,6 +315,7 @@ import {
 						}
 					},
 					fail: function(res) {
+						console.log(res)
 						uni.hideLoading();
 						that.Tips({
 							title: '上传图片失败'

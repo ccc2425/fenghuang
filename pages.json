@@ -660,6 +660,7 @@
 		}
 	],
 	"globalStyle": {
+		"navigationStyle":"default",
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "crmeb",
 		"navigationBarBackgroundColor": "#fff",

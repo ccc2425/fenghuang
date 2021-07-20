@@ -60,9 +60,12 @@
 				}
 			}
 			// #endif
+
 			// 获取导航高度；
 			uni.getSystemInfo({
 				success: function(res) {
+					console.log(res.statusBarHeight)
+					
 					that.globalData.navHeight = res.statusBarHeight * (750 / res.windowWidth) + 91;
 				}
 			});

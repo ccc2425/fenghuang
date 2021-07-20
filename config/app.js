@@ -2,6 +2,7 @@
 let VUE_APP_WS_URL = `ws://${location.hostname}?type=user`
 // #endif
 
+
 // 网络接口修改此字符 小程序域名要求https
 let httpApi = 'http://mtshop.bj177.cn'
 
@@ -10,6 +11,7 @@ let wsApi = 'wss://mtshop.bj177.cn'
 
 module.exports = {
 	// 请求域名 格式： https://您的域名
+	HTTP_REQUEST_URL: httpApi ||  window.location.protocol + "//" + window.location.host,
 	// #ifdef MP
 	HTTP_REQUEST_URL: httpApi,
 	VUE_APP_WS_URL: `${wsApi}?type=user`,
