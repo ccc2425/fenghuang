@@ -1,12 +1,12 @@
 <template>
 	<view>
 		<view class='my-account'>
-			<view class="head-wrapper">
+			<!-- <view class="head-wrapper">
 				<view class="head-menu fh">
 					<view class='iconfont icon-xiangzuo ft20' style="width: 10%;float: left;margin-left: 10px;" @click="returns"></view>
 					<view style="width: 80%;float: left;text-align: center;">个人中心</view>
 				</view>
-			</view>		
+			</view>	 -->	
 			<view class='wrapper'>
 				<view class='header'>
 					<view class='headerCon'>

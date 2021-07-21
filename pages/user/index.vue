@@ -14,7 +14,7 @@
 						<!-- #endif -->
 						<view class="name" v-if="userInfo.uid">
 							{{userInfo.nickname}}
-							<view class="vip" v-if="!timeShow">
+							<view class="vip" v-if="timeShow">
 								<view style="margin-left: 10rpx;" class="vip-txt">{{userInfo.vip_name}}</view>
 							</view>
 						</view>
@@ -56,7 +56,7 @@
 		</view>
         <div class="user">
             <div class="wrapper" style="background-color: white;width: calc(100% - 20px);
-    left: 10px;border-radius: 6px;" v-if="!timeShow">
+    left: 10px;border-radius: 6px;" v-if="timeShow">
                 <div style="height: 10px;"></div>
               <div class="nav acea-row row-middle">
                   <!-- <router-link :to="{ path: '/user/account' }" class="item">
@@ -144,7 +144,7 @@
 				<view class="title">我的服务</view>
 				<view class="menu-box" v-if="isLogin">
                     <!-- <navigator url="/pages/users/user_money_pay_list/index" class="item" hover-class="none"> -->
-                    <view v-if="!timeShow" @click="showFullScreenVideoAd" class="item" hover-class="none">
+                    <view v-if="timeShow" @click="showFullScreenVideoAd" class="item" hover-class="none">
                     	<image src="/static/images/user-menu-003.png"></image>
                     	<text>互换大厅</text>
                     </view>
@@ -152,15 +152,15 @@
                     	<image src="/static/images/user-menu-001.png"></image>
                     	<text>互换大厅</text>
                     </view> -->
-					<navigator v-if="!timeShow" url="/pages/users/user_money/index" class="item" hover-class="none" >
+					<navigator v-if="timeShow" url="/pages/users/user_money/index" class="item" hover-class="none" >
 						<image src="/static/images/user-menu-001.png"></image>
 						<text>我的贡献值</text>
 					</navigator>
-					<navigator url="/pages/users/user_spread_user/index" class="item" hover-class="none" v-if="is_promoter == 1&& !timeShow">
+					<navigator url="/pages/users/user_spread_user/index" class="item" hover-class="none" v-if="is_promoter == 1&& timeShow">
 						<image src="/static/images/4-002.png"></image>
 						<text>我的团队</text>
 					</navigator>
-					<navigator url="/pages/users/distributor/index" class="item" hover-class="none"  v-if="is_promoter != 1&& !timeShow">
+					<navigator url="/pages/users/distributor/index" class="item" hover-class="none"  v-if="is_promoter != 1&& timeShow">
 						<image src="/static/images/user-menu-001.png"></image>
 						<text>我的团队</text>
 					</navigator>

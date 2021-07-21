@@ -14,6 +14,9 @@ import { parseQuery } from "./utils";
 import Auth from './libs/wechat';
 import { SPREAD } from './config/cache';
 Vue.prototype.$wechat = Auth;
+import topApp from './components/topApp.vue'
+
+Vue.component('topApp',topApp)
 let cookieName = "VCONSOLE",
 	query = parseQuery(),
 	urlSpread = query["spread"],

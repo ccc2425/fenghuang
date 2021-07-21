@@ -1,12 +1,12 @@
 <template>
 	<view>
 		<view class='my-order'>
-			<view class="head-wrapper">
+			<!-- <view class="head-wrapper">
 				<view class="head-menu fh">
 					<view class='iconfont icon-xiangzuo ft20' style="width: 10%;float: left;margin-left: 10px;" @click="returns"></view>
 					<view style="width: 80%;float: left;text-align: center;">我的订单</view>
 				</view>
-			</view>		
+			</view>	 -->	
 			<view class='header bg-color'>
 				<view class='picTxt acea-row row-between-wrapper'>
 					<view class='text'>

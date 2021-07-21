@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class='productList'>
-			<view class='search bg-color acea-row row-between-wrapper'>
+			<view class='search bg-color acea-row row-between-wrapper' :style="'padding-top:'+height+'px'">
 				<view class="back" @click='set_where(1)'>
 					<view class="iconfont icon-xiangzuo"></view>
 				</view>
@@ -11,7 +11,7 @@
 				</view>
 				<view style="text-align: right;" class='iconfont' :class='is_switch==true?"icon-pailie":"icon-tupianpailie"' @click='Changswitch'></view>
 			</view>
-			<view class="nav-wrapper">
+			<view class="nav-wrapper" :style="'margin-top: calc(86rpx + '+height+'px);'">
 
 					<view class='nav acea-row row-middle'>
 						<view class='item' @click="downStatus = !downStatus" :class="{'font-color':downKey>0 && firstKey == 0}">
@@ -185,7 +185,8 @@
 					order:''
 				},
 				storeKey:0,
-				storeScroll:true
+				storeScroll:true,
+				height:0
 			};
 		},
 		onLoad: function(options) {
@@ -194,6 +195,7 @@
 			this.$set(this.where, 'keyword', options.searchValue || '');
 			this.get_product_list();
 			this.get_host_product();
+			this.height = uni.getSystemInfoSync().statusBarHeight
 		},
 		methods: {
 			// 去店铺
@@ -423,7 +425,7 @@
 <style lang="scss">
 	.productList .search {
 		width: 100%;
-		height: 86rpx;
+		// height: 86rpx;
 		padding: 0 20rpx;
 		box-sizing: border-box;
 		position: fixed;
@@ -484,7 +486,7 @@
 		left: 0;
 		top: 0;
 		width: 100%;
-		margin-top: 86rpx;
+		// margin-top: 86rpx;
 		background-color: $theme-color;
 
 		.tab-bar {

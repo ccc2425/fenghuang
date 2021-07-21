@@ -1,10 +1,10 @@
 <template>
 	<view class="feedback-container">
-		<view class="head-wrapper" :style="'top:'+statusBarHeight">
+		<!-- <view class="head-wrapper" :style="'top:'+statusBarHeight">
 			<view class="head-menu fh">
 				<view class='iconfont icon-xiangzuo ft20' @click="returns">返回</view>
 			</view>
-		</view>	
+		</view>	 -->
 	<view class="user_store_attention" style="background-color: #fff;">
 		<h2 style="margin-top:20px;margin-bottom:10px;text-align:center">
 		    <strong><span style="font-family: Helvetica;font-size: 26px">隐私政策</span></strong>

@@ -1,11 +1,11 @@
 <template>
 	<view class="feedback-container">
-		<view class="head-wrapper" >
+		<!-- <view class="head-wrapper" >
 			<view class="head-menu fh">
 				<view class='iconfont icon-xiangzuo ft20' style="width: 10%;float: left;" @click="returns"></view>
 				<view style="width: 80%;float: left;text-align: center;">付款凭证</view>
 			</view>
-		</view>
+		</view> -->
 		
 		<view class="item-box">
             <!-- <view class="title-box">

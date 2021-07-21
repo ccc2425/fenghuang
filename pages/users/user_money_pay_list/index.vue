@@ -1,12 +1,12 @@
 <template>
 	<view>
 		<view class='bill-details'>
-			<view class="head-wrapper">
+			<!-- <view class="head-wrapper">
 				<view class="head-menu fh">
 					<view class='iconfont icon-xiangzuo ft20' style="width: 10%;float: left;" @click="returns"></view>
 					<view style="width: 80%;float: left;text-align: center;">交易大厅</view>
 				</view>
-			</view>	
+			</view>	 -->
 			<view class='nav acea-row'>
 				<view class='item' :class='type==0 ? "on":""' @click='changeType(0)'>交易市场</view>
 				<view class='item' :class='type==1 ? "on":""' @click='changeType(1)'>我的买入</view>

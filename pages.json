@@ -30,6 +30,10 @@
 			"path": "pages/user/index",
 			"style": {
 				"navigationBarTitleText": "个人中心",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"scrollIndicator": false //禁用原生导航栏
+				},
 				"navigationBarBackgroundColor": "#EB3C3C"
 					// #ifdef MP
 					,
@@ -137,7 +141,11 @@
 			"pages": [{
 					"path": "retrievePassword/index",
 					"style": {
-						"navigationBarTitleText": "忘记密码"
+						"navigationBarTitleText": "忘记密码",
+						"navigationStyle": "custom",
+						"app-plus": {
+							"scrollIndicator": false //禁用原生导航栏
+						}
 					}
 				},
 				{
@@ -423,7 +431,11 @@
 				{
 					"path": "login/index",
 					"style": {
-						"navigationBarTitleText": "登录"
+						"navigationBarTitleText": "登录",
+						"navigationStyle": "custom",
+						"app-plus": {
+							"scrollIndicator": false //禁用原生导航栏
+						}
 					}
 				},
 				{
@@ -617,7 +629,11 @@
 				{
 					"path": "goods_list/index",
 					"style": {
-						"navigationBarTitleText": "商品列表"
+						"navigationBarTitleText": "商品列表",
+						"navigationStyle": "custom",
+						"app-plus": {
+							"scrollIndicator": false //禁用原生导航栏
+						}
 					}
 				},
 				{
@@ -660,12 +676,12 @@
 		}
 	],
 	"globalStyle": {
-		"navigationStyle":"default",
+		// "navigationStyle":"default",
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "crmeb",
 		"navigationBarBackgroundColor": "#fff",
-		"backgroundColor": "#F8F8F8",
-		"titleNView": false
+		"backgroundColor": "#F8F8F8"
+		// "titleNView": false
 	},
 	"tabBar": {
 		"color": "#282828",

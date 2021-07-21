@@ -1,5 +1,6 @@
 <template>
 	<view class="page-index" :class="{'bgf':navIndex >0}">
+	<!-- <topApp></topApp> -->
 		<!-- #ifdef H5 -->
 		<view class="header">
 			<view class="serch-wrapper flex acea-row row-between-wrapper">

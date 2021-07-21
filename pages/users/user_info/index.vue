@@ -1,11 +1,11 @@
 <template>
 	<view>
-		<view class="head-wrapper">
+		<!-- <view class="head-wrapper">
 			<view class="head-menu fh">
 				<view class='iconfont icon-xiangzuo ft20' style="width: 10%;float: left;margin-left: 10px;" @click="returns"></view>
 				<view style="width: 80%;float: left;text-align: center;">设置</view>
 			</view>
-		</view>		
+		</view>		 -->
 		<form @submit="formSubmit" report-submit='true'>
 			<view class='personal-data'>
 				<view class="wrapper" v-if="switchUserInfo.length>0">
@@ -62,7 +62,7 @@
 							<text class='iconfont icon-suozi'></text>
 						</view>
 					</view> -->
-                    <view class='item acea-row row-between-wrapper' v-if="!timeShow">
+                    <view class='item acea-row row-between-wrapper'>
                     	<view>收款码</view>
                         <navigator url="/pages/users/user_money_pay_list/payercode" class='input acea-row row-between-wrapper ri-my'>点击查看</navigator>
                     </view>
@@ -70,7 +70,7 @@
                     	<view>修改登录密码</view>
                         <navigator url="/pages/users/user_money_pay_list/editpwd" class='input acea-row row-between-wrapper ri-my'>点击修改</navigator>
                     </view>
-                    <view class='item acea-row row-between-wrapper' v-if="!timeShow">
+                    <view class='item acea-row row-between-wrapper' v-if="timeShow">
                     	<view>修改支付密码</view>
                         <navigator url="/pages/users/user_money_pay_list/editpaypwd" class='input acea-row row-between-wrapper ri-my'>点击修改</navigator>
                     </view>

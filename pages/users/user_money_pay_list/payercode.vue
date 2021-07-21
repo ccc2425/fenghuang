@@ -1,10 +1,10 @@
 <template>
 	<view class="feedback-container">
-		<view class="head-wrapper" :style="'top:'+statusBarHeight">
+		<!-- <view class="head-wrapper" :style="'top:'+statusBarHeight">
 			<view class="head-menu fh">
 				<view class='iconfont icon-xiangzuo ft20' @click="returns">返回</view>
 			</view>
-		</view>
+		</view> -->
 		
 		<view class="yhk">收款码信息：</view>
 		<view class="item-box">
