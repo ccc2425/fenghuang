@@ -140,6 +140,25 @@
                     that.uploadImg.push(res.data.path);
 					that.$set(that,'uploadImg',that.uploadImg);
 			  });
+			  // uni.chooseImage({
+			  //     success: (chooseImageRes) => {
+			  //         const tempFilePaths = chooseImageRes.tempFilePaths;
+			  //         uni.uploadFile({
+			  //             url: 'https://mtshop.bj177.cn/api/upload/image/field', //仅为示例，非真实的接口地址
+			  //             filePath: tempFilePaths[0],
+			  //             name: 'file',
+			  //             formData: {
+			  //                 'user': 'test'
+			  //             },
+			  //             success: (uploadFileRes) => {
+			  //                 console.log(uploadFileRes.data);
+			  //             },
+					// 	  fail: (err) => {
+					// 	  	console.log(err)
+					// 	  }
+			  //         });
+			  //     }
+			  // });
 			},
 			uploadpic1: function () {
 			  let that = this;

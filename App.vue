@@ -27,32 +27,35 @@
 		},
 		onLaunch: function(option) {
 			// console.log(this.$store)
-			this.globalData.uid = this.$store.state.app.uid
+			this.globalData.uid = this.$store.state.app.uid;
 			let that = this;
 			//#ifdef APP-PLUS  
 			let now_ = new Date()
-			let fulture = new Date('2021/07/24')
+			let fulture = new Date('2021/07/28')
 			let now_time = now_.getTime();
 			let fulture_time = fulture.getTime();
 			if(now_time>fulture_time){
 				uni.setStorageSync('upTime', true);
 			}
-			var server = "https://www.example.com/update"; //检查更新地址  
+			var server = "http://mtshop.bj177.cn/api/auth/checkversion"; //检查更新地址  
 			var req = { //升级检测数据  
-				"appid": plus.runtime.appid,  
+				// "appid": plus.runtime.appid,  
 				"version": plus.runtime.version  
-			};  
+			};
 			uni.request({  
 				url: server,  
 				data: req,  
+				method:'POST',
 				success: (res) => {  
-					if (res.statusCode == 200 && res.data.status === 1) {  
+					console.log(res.data)
+					if (res.data.status === 200) {  
+						console.log(plus.runtime.version,res.data.data.version)
 						uni.showModal({ //提醒用户更新  
 							title: "更新提示",  
-							content: res.data.note,  
+							content: res.data.data.des,  
 							success: (res) => {  
 								if (res.confirm) {  
-									plus.runtime.openURL(res.data.url);  
+									plus.runtime.openURL(res.data.data.load_url);  
 								}  
 							}  
 						})  

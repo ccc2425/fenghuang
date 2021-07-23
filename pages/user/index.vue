@@ -3,6 +3,7 @@
 		<view class="head">
 			<view class="user-card">
 				<view class="bg"></view>
+				<view :style="{'height':height+'px'}"></view>
 				<view class="user-info">
 					<image class="avatar" :src='userInfo.avatar' v-if="userInfo.avatar" @click="goEdit()"></image>
 					<image v-else class="avatar" src="/static/images/f.png" mode="" @click="goEdit()"></image>
@@ -45,7 +46,7 @@
 						<view class="txt">优惠券</view>
 					</view>
 				</view>
-				<view class="right-btn">
+				<view class="right-btn" :style="'top:calc('+height+'px + 10rpx)'">
 					<view class="iconfont icon-shezhi" @click="goEdit()" v-if="userInfo.phone"></view>
 					<!-- <navigator class="btn" url="/pages/chat/customer_list/index?type=0" hover-class="none">
 						<view class="iconfont icon-xiaoxi"></view>
@@ -266,6 +267,7 @@
 				is_promoter:0,//推广人开关  1开
 				mer_intention_open:0,
 				loading: false,
+				height:0,
 			}
 		},
 		onLoad() {
@@ -281,6 +283,8 @@
 		},
 		onShow: function() {
 			let that = this;
+			this.height = uni.getSystemInfoSync().statusBarHeight
+			console.log(this.height)
 			if (that.isLogin) {
 				this.getUserInfo();
 				this.orderNum();
@@ -748,7 +752,7 @@
 		z-index: 99;
 		position: absolute;
 		right: 30rpx;
-		top: 40rpx;
+		// top: 40rpx;
 		display: flex;
 		align-items: center;
 		color: #fff;

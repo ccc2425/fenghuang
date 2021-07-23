@@ -13,9 +13,7 @@
 		{
 			"path": "pages/index/std",
 			"style": {
-				"navigationStyle": "custom"
 					// #ifdef MP
-					,
 				"navigationBarTextStyle": "#fff"
 				// #endif
 			}
@@ -639,7 +637,11 @@
 				{
 					"path": "loot_list/index",
 					"style": {
-						"navigationBarTitleText": "夺宝列表"
+						"navigationBarTitleText": "夺宝列表",
+						"navigationStyle": "custom",
+						"app-plus": {
+							"scrollIndicator": false //禁用原生导航栏
+						}
 					}
 				},
 				{

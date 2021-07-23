@@ -280,7 +280,14 @@ import {
  					title: '图片上传中',
  				});
 				let tempFilePaths = res.tempFilePaths[0]
+				//#ifdef APP-PLUS  
+				console.log(123)
+				let urls = 'https://mtshop.bj177.cn/api/' + uploadUrl+'/'+inputName
+				//#endif
+				//#ifndef APP-PLUS
+				console.log(234)
 				let urls = HTTP_REQUEST_URL + '/api/' + uploadUrl+'/'+inputName
+				//#endif
 				console.log(urls)
 				uni.uploadFile({
 					url: urls,

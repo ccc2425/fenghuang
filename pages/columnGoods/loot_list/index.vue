@@ -2,6 +2,7 @@
 	<view>
 		<view class='productList'>
 			<view class='search bg-color acea-row row-between-wrapper'>
+				<view :style="{'height':height+'px','width':'100%'}"></view>
 				<view class="back" @click='back'>
 					<view class="iconfont icon-xiangzuo"></view>
 				</view>
@@ -14,7 +15,7 @@
 			
 			<!-- 商品 -->
 			<block v-if="tabIndex == 1">
-				<view class='list acea-row row-between-wrapper' :class='is_switch==true?"":"on"'>
+				<view class='list acea-row row-between-wrapper' :class='is_switch==true?"":"on"' :style="'margin-top:calc(100rpx + '+height+'px)'">
 					<view class='item' :class='is_switch==true?"":"on"' hover-class='none' v-for="(item,index) in productList" :key="index"
 					 @click="godDetail(item)">
 						<view class='pictrue' :class='is_switch==true?"":"on"'>
@@ -160,10 +161,12 @@
 					order:''
 				},
 				storeKey:0,
-				storeScroll:true
+				storeScroll:true,
+				height:0,
 			};
 		},
 		onLoad: function(options) {
+			this.height = uni.getSystemInfoSync().statusBarHeight
 			// this.$set(this.where, 'cate_id', options.id || '');
 			// this.title = options.title || '';
 			// this.$set(this.where, 'keyword', options.searchValue || '');
@@ -322,7 +325,8 @@
 				});
 			},
 			back:function(){
-			   location.href = '/'
+			   // location.href = '/'
+			   uni.navigateBack()
 			},
 			//点击事件处理
 			set_where: function(e) {
@@ -404,7 +408,7 @@
 <style lang="scss">
 	.productList .search {
 		width: 100%;
-		height: 86rpx;
+		// height: 86rpx;
 		padding: 0 20rpx;
 		box-sizing: border-box;
 		position: fixed;

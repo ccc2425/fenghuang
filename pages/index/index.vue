@@ -1,7 +1,8 @@
 <template>
 	<view class="page-index" :class="{'bgf':navIndex >0}">
 	<!-- <topApp></topApp> -->
-		<!-- #ifdef H5 -->
+		<!-- #ifdef H5|| APP-PLUS -->
+		<view :style="{'height':height+'px'}"></view>
 		<view class="header">
 			<view class="serch-wrapper flex acea-row row-between-wrapper">
 				<view class="logo">
@@ -317,9 +318,11 @@
 				brandList: [],
 
 				loading: false,
+				height:0,
 			}
 		},
 		onLoad() {
+			this.height = uni.getSystemInfoSync().statusBarHeight
 			uni.getLocation({
 				type: 'wgs84',
 				success: function(res) {
@@ -699,19 +702,20 @@
 				})
 			},
 			jfq() {
-				location.href = '/pages/goods_cate/goods_cate?navActive=0'
-				// uni.switchTab({
-				//     url: `/pages/goods_cate/goods_cate?navActive=0`
-				// })
+				// location.href = '/pages/goods_cate/goods_cate?navActive=0'
+				uni.switchTab({
+					url: `/pages/goods_cate/goods_cate?navActive=0`
+				})
+				console.log(123)
 				// uni.navigateTo({
 				// 	url: `/pages/goods_cate/goods_cate?type=jfq`
 				// })
 			},
 			tgq() {
-				location.href = '/pages/goods_cate/goods_cate?navActive=1'
-				// uni.switchTab({
-				//     url: `/pages/goods_cate/goods_cate?navActive=1`
-				// })
+				// location.href = '/pages/goods_cate/goods_cate?navActive=1'
+				uni.switchTab({
+				    url: `/pages/goods_cate/goods_cate?navActive=1`
+				})
 				// uni.navigateTo({
 				//     url: `/pages/goods_cate/goods_cate?type=tgq`
 				// })
@@ -723,8 +727,10 @@
 
 			},
 			dbq() {
-				location.href = `/pages/columnGoods/loot_list/index`
-
+				// location.href = `/pages/columnGoods/loot_list/index`
+				uni.navigateTo({
+				    url: `/pages/columnGoods/loot_list/index`
+				})
 			},
 			// 直播
 			getLiveList: function() {
