@@ -31,7 +31,7 @@
 			let that = this;
 			//#ifdef APP-PLUS  
 			let now_ = new Date()
-			let fulture = new Date('2021/07/28')
+			let fulture = new Date('2021/07/29')
 			let now_time = now_.getTime();
 			let fulture_time = fulture.getTime();
 			if(now_time>fulture_time){
